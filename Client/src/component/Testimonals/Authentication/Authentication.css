@@ -1,0 +1,136 @@
+/* General Styles */
+.authentication-container {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+  margin-top: -50px;
+  width: 600px;
+  margin: 0 auto;
+  z-index: 1000;
+  border-radius: 30px;
+}
+
+/* Container */
+.authentication {
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.authentication .header {
+  display: flex;
+  justify-content: end;
+}
+
+.authentication .header img {
+  margin-top: -30px;
+  width: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+}
+
+
+
+.authentication .header img:hover {
+  transform: scale(1.2);
+}
+
+.error-message-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  color: rgb(255, 0, 0);
+  opacity: .7;
+  background-color: white;
+}
+
+
+.error-message-box h4 {
+  font-family: initial;
+}
+
+
+/* Form */
+.authentication form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Fields */
+.authentication input[type="text"],
+.authentication input[type="password"],
+.authentication textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.authentication input[type="text"]:focus,
+.authentication input[type="password"]:focus,
+.authentication textarea:focus {
+  border-color: #66afe9;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Textarea */
+.authentication textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Submit Button */
+.authentication input[type="submit"] {
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.authentication input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .authentication {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .authentication h1 {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+  .authentication {
+    width: 200px;
+  }
+
+  .authentication input[type="text"],
+  .authentication input[type="password"],
+  .authentication textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+}

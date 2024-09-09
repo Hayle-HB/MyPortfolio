@@ -1,0 +1,366 @@
+:root {
+  --primary-color: aqua;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: inherit; /* Maintain the same background color as the rest of the nav */
+  background-color: #0a192f;
+}
+
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.navigation .nav-content nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 15px;
+}
+
+.navigation .nav-content nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+nav ul li a::before,
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #dd10bb;
+  transition: width 0.4s ease-in-out;
+}
+
+nav ul li a::after {
+  left: 0;
+  width: 0;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid aqua;
+  width: 150px;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 1250px) {
+  .logo {
+    margin-left: -80px;
+  }
+}
+
+.logo:hover {
+  animation: borderColorChange 2s linear infinite;
+}
+
+.logo h1 {
+  align-items: center;
+  position: relative;
+  display: inline-block;
+  font-size: 2vw;
+  color: aqua;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.4s ease-in-out, background-size 0.4s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, #ff01af 0%, #ff0000 100%);
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  background-position: 0 100%;
+  text-shadow: 2px 2px 2px white;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logo h1:hover {
+  animation: pulse 0.6s infinite;
+  letter-spacing: 4px;
+  background-size: 100% 2px;
+  color: rgb(0, 247, 255);
+}
+
+/* Base button styling */
+.navigation .nav-content button {
+  width: 150px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  border: 1px solid aqua;
+  border-radius: 20px;
+  color: rgb(0, 255, 149);
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling for the border color rotation */
+@keyframes borderColorChange {
+  0% {
+    border-color: aqua;
+  }
+  25% {
+    border-color: red;
+  }
+  50% {
+    border-color: yellow;
+  }
+  75% {
+    border-color: green;
+  }
+  100% {
+    border-color: aqua;
+  }
+}
+
+.navigation .nav-content button {
+  width: 10vw;
+  height: 8vh;
+  border: none;
+  background-color: transparent;
+  color: white;
+  border-radius: 20px;
+  color: rgb(0, 255, 149);
+  font-size: 1vw;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 25px;
+  margin-left: -200px;
+}
+
+.navigation .nav-content button:hover::before {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, aqua, aqua) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rotateBorder 2s linear infinite;
+  border: 1px solid aqua;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation .nav-content button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 1px solid rgb(0, 255, 149);
+  z-index: -1;
+}
+
+#menu,
+#close {
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 15px;
+  width: 20px;
+  z-index: 1000;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1130px) {
+  .logo {
+    height: 60px;
+  }
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .navigation .nav-content button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+}
+
+@media screen and (max-width: 1050px) {
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 700px) {
+  .main-body-container {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .navigation .nav-content nav ul {
+    position: absolute;
+    flex-direction: column;
+    left: 65%;
+    transform: translateX(-50%);
+    background-color: #0a192f;
+    width: 250px;;
+    padding-bottom: 40px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px var(--primary-green-color);
+    border: 1px solid var(--primary-green-color);
+    gap: 10px;
+  }
+  
+  #menu , #close{
+    display: block;
+  }
+
+  .logo {
+    margin-left: 0px;
+    width: 100px;
+    height: 50px;
+    animation: borderColorChange 2s linear infinite;
+  }
+}
+
+/* 
+.none {
+  display: none;
+}
+
+.none:hover {
+  cursor: pointer;
+}
+
+
+@media (max-width: 858px){
+  .none {
+    display: block;
+  }
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #2c3e50;
+    top: 80px;
+    left: -300%;
+    text-align: center;
+    transition: all .5s;
+  }
+  
+  nav input {
+    opacity: 0;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  a:hover, a.active {
+    background:none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #check:checked ~ label #btn {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+} */

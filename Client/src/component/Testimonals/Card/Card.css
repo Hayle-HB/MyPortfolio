@@ -1,0 +1,72 @@
+.card {
+  border: 1px solid aqua;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 16px;
+  max-width: 250px;
+  margin: 10px;
+}
+
+.card.highlighted {
+  border: 2px solid #007bff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  filter: grayscale(0%);
+}
+
+.card-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-content {
+  margin-top: 12px;
+}
+
+.card-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: aqua;
+}
+
+.card-testimony {
+  font-size: 16px;
+  opacity: 0.6;
+  margin: 8px 0;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Adjust number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+.card button {
+  background-color: inherit;
+  border: none;
+  color: #ff00b7;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.card button:hover {
+  color: rgb(0, 42, 255);
+  cursor: pointer;
+}
+
+
+@media (max-width: 845px){
+  .card {
+    max-width: 400px;
+  }
+}

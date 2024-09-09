@@ -1,0 +1,60 @@
+.social-links {
+  position: fixed; /* Keeps it in a fixed position relative to the viewport */
+  left: 0; /* Aligns it to the left edge of the viewport */
+  top: 50%; /* Centers it vertically */
+  transform: translateY(-50%); /* Adjusts for vertical centering */
+  padding: 1rem; /* Add padding if needed */
+  z-index: 1; /* Ensures it is above other content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 2px 20px aqua;
+  width: 1.4vw;
+}
+.social-links h2 {
+  color: white;
+  padding-top: 30px;
+  color: yellow;
+}
+
+.social-links-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.social-links-content img {
+  width: 16px;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease; /* Smooth transition for the grayscale filter */
+}
+
+.social-links-content img#tiktok {
+  text-shadow: 3px 3px red;
+}
+
+.social-links-content img:hover {
+  filter: grayscale(1000%);
+  cursor: pointer;
+  animation: rotate 0.5s ease forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate to 180 degrees */
+  }
+}
+
+@media (max-width: 600px) {
+  .social-links {
+    box-shadow: none;
+  }
+}

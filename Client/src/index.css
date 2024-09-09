@@ -1,0 +1,122 @@
+:root {
+  --primary-green-color: rgb(0, 237, 100);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #0a192f; 
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  scroll-behavior: smooth;
+  scrollbar-width: none;    
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  background-color: #0a192f;
+  color: white;
+  height: 100vh;
+} */
+/* Hide scrollbars but still allow scrolling */
+html,
+body {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* App.css */
+.app {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.app h1 {
+  background: linear-gradient(90deg, #ff00d4, #112cfc); /* Gradient color */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* FamilyTree.css */
+.family-tree {
+  display: inline-block;
+  text-align: left;
+}
+
+/* TreeNode.css */
+.tree-node {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+}
+
+.node-content span {
+  cursor: pointer;
+  margin-right: 10px;
+  color: aqua;
+}
+
+.node-content span:hover {
+  color: white;
+}
+
+.node-content button {
+  margin-left: 5px;
+}
+
+.children {
+  margin-left: 20px;
+  border-left: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.nav {
+  border: 1px solid aqua;
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+.tree-node {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+}
+
+.node-content span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.node-content button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.node-content button:hover {
+  background-color: #0056b3;
+}
+
+.children {
+  margin-left: 10px;
+  border-left: 1px solid aqua;
+  padding-left: 10px;
+}

@@ -1,0 +1,154 @@
+/* src/Skill.css */
+
+.slider-container {
+  margin-bottom: 200px;
+  width: 80%;
+  height: 40vh;
+  max-width: 50vw;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid aquamarine;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container h1 {
+  color: aqua;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.skill-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-icon:hover {
+  animation: rotate 1s;
+  cursor: pointer;
+}
+
+.skill-content h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: white;
+  opacity: 0.7;
+  text-shadow: 1px 1px 1px red;
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.skill-content h3:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.skill-content p {
+  font-size: 1.3em;
+  opacity: 0.6;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+/* Customize slick slider dots */
+.slick-dots li button:before {
+  color: white; /* Set the color of the dots to white */
+}
+
+.slick-dots li.slick-active button:before {
+  color: rgb(0, 13, 255); /* Set the color of the active dot to white */
+}
+
+.skill-content span {
+  display: block;
+  width: 50%;
+  height: 6px;
+  margin-top: 20px;
+  background-color: #e0e0e0; /* Light grey background for the bar */
+  border-radius: 5px;
+  overflow: hidden; /* Ensure the filled bar doesn't overflow */
+  position: relative;
+}
+
+.skill-content span::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #003cff; /* Color for the filled part of the bar */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the left side */
+  transition: width 0.5s ease-in-out;
+}
+
+.skill-content span[data-percentage]::before {
+  width: calc(var(--percentage) * 1%); /* Set width based on percentage */
+}
+
+@media (max-width: 500px) {
+  .slider-container {
+    max-width: 200px;
+  }
+  .slider-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .skill-icon {
+    width: 30px;
+    margin-bottom: 0px;
+  }
+
+  .icon-title {
+    display: flex;
+    gap: 20px;
+  }
+
+  .js,
+  .css,
+  .py {
+    width: 20px;
+  }
+
+  .skill-content p {
+    font-size: 0.8rem;
+  }
+  .skill-content span {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+}

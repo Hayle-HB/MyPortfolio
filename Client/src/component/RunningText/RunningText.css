@@ -1,0 +1,45 @@
+.running-text-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  height: 40px;
+  margin-top: -100px;
+  margin-bottom: 40px;
+  color: var(--primary-green-color);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.running-text {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  width: 80%;
+  animation: scroll-text 20s linear infinite;
+}
+
+/* Animation for scrolling the text */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (max-width: 500px){
+  .running-text-container {
+    font-size: 1.3rem;
+    width: 100%;
+    margin-top: -50px;
+  }
+
+  .running-text {
+    width: 100%;
+    animation: scroll-text 10s linear infinite;
+  }
+}

@@ -1,0 +1,226 @@
+.main-body-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+
+.main-body-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 30px;
+}
+
+.main-text-area {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.main-text-area .I-am {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: yellow;
+}
+
+.main-text-area h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: aqua;
+}
+
+.main-text-area p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.profile-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image img {
+  height: 395px;
+  width: 395px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.profile-image img:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+.main-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-buttons img {
+  width: 25px;
+  padding: 0px 10px;
+}
+
+.main-buttons .mongo-db {
+  border-radius: 50%;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.main-buttons img:hover {
+  cursor: pointer;
+  animation: rotate 0.5s ease forwards;
+  opacity: 0.5;
+}
+
+.main-buttons img:first-child {
+  margin-left: -10px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate to 180 degrees */
+  }
+}
+
+.download-resume {
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.download-resume button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7b00ff 0%, #fc25c6 100%);
+  color: rgb(212, 208, 208);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  opacity: 0.79;
+}
+
+.download-resume button:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  color: white;
+}
+
+/* 
+.download-resume {
+  position: absolute;
+  padding: 20px;
+  border-radius: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4vw;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.download-resume button {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+
+button:hover {
+  color: aqua;
+  opacity: .7;
+}
+ */
+
+@media (max-width: 500px) {
+  .main-body-container {
+    margin-top: 50px;
+    margin-left: 50px;
+    position: relative;
+  }
+  .main-body-content {
+    flex-direction: column;
+  }
+
+  .main-text-area h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  .profile-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .main-buttons img {
+    width: 15px;
+    padding: 0px 10px;
+  }
+
+  .main-buttons .mongo-db {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+  }
+
+ .download-resume {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.download-resume button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: .9em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #7b00ff 0%, #fc25c6 100%);
+  color: rgb(212, 208, 208);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  opacity: .75;
+  color: rgb(0, 0, 0);
+}
+
+.download-resume button:hover {
+  transform: scale(1.09);
+  opacity: 1;
+  color: white;
+}
+
+
+}
