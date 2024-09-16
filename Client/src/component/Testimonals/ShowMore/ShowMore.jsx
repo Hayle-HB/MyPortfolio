@@ -121,12 +121,12 @@ const ShowMore = ({ selected, handleSelected, handleDelete }) => {
           <img
             className="icon"
             src={remove}
-            alt="Delete" 
+            alt="Delete"
             onClick={handleDeleteClick}
           />
         </div>
       </div>
-      {getAuthPage && <Authentication handleDelete />}
+      {getAuthPage && <Authentication handlegetAuthPage= {handlegetAuthPage} />}
     </div>
   ); 
 };

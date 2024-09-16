@@ -287,6 +287,10 @@ nav ul li a:hover::after {
     display: block;
   }
 
+  #menu {
+    margin-top: -15px;
+  }
+
   .logo {
     margin-left: 0px;
     width: 100px;

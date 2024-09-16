@@ -3,7 +3,8 @@ import "./Authentication.css";
 import close from "../../../assets/svgs/close.svg";
 const Authentication = () => {
   const [data, setData] = useState("");
-  const [error, setError] = useState(false);
+  const [visible, setVisible] = useState(true);
+
 
   const handleChange = (e) => {
     const newData = e.target.value;
@@ -15,16 +16,19 @@ const Authentication = () => {
     console.log(data);
   };
 
-  const handleErrorMessage = () => {
-    setError(!error);
-  };
+  const handleClose = () => {
+    setVisible(!visible);
+  }
+
+
+
 
   return (
     <div className="authentication-container">
-      <div className="authentication">
+      {visible && <div className="authentication">
         <div className="header">
           {/* <h1>Pass Key</h1> */}
-          <img src={close} alt="X" />
+          <img src={close} onClick={() => handleClose()} alt="X" />
         </div>
         <form>
           {/* <input type="text" for="name" required placeholder="Name" />
@@ -39,13 +43,8 @@ const Authentication = () => {
             placeholder="Enter Pass Key"
           />
           <input type="submit" onSubmit={() => handleSubmit()} />
-          {error && (
-            <span className="error-message-box">
-              <h4>Please Enter the pass key first or close it</h4>
-            </span>
-          )}
         </form>
-      </div>
+      </div>}
     </div>
   );
 };

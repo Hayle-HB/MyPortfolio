@@ -3,7 +3,7 @@ import "./NavBar.css"; // Assuming you have a separate CSS file for styling
 import open from "../../assets/svgs/menu.svg";
 import close from "../../assets/svgs/close.svg";
 const NavBar = () => {
-  const [menu, setMenu]  = useState(true);
+  const [menu, setMenu]  = useState(false);
 
   const handleNavigationMenu = (e) => {
     setMenu(!menu);
