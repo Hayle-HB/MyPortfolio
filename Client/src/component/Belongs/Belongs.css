@@ -1,0 +1,36 @@
+.belongs-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.belongs-container .each-belong {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.belongs-container .detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(23, 32, 32);
+  border-radius: 50px;
+  text-align: center;
+
+  animation: move-left 0.7s ease-in;
+  cursor: pointer;
+}
+
+@keyframes move-left {
+  0% {
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
+}
+.belongs-container .detail-container img {
+  border-radius: 10%;
+  width: 300px;
+  height: 300px;
+}

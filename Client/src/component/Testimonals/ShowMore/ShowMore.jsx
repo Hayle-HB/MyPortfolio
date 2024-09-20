@@ -21,19 +21,19 @@ const ShowMore = ({ selected, handleSelected, handleDelete }) => {
   const [getAuthPage, setgetAuthPage] = useState(false);
 
   const handleDeleteClick = () => {
-    if (!showEditWarning) {
+    if (!showEditWarning && !getAuthPage) {
       setShowWarning(!showWarning);
     }
   };
 
   const handleEditClick = () => {
-    if (!showWarning) {
+    if (!showWarning && !getAuthPage) {
       setShowEditWarning(!showEditWarning);
     }
   };
 
   const handlegetAuthPage = () => {
-    setgetAuthPage(true);
+    setgetAuthPage(!getAuthPage);
     setShowEditWarning(false);
     setShowWarning(false);
   };
@@ -43,92 +43,91 @@ const ShowMore = ({ selected, handleSelected, handleDelete }) => {
   }, []);
 
   return (
-    <div className="showMore-Container2">
-      <div className="show-more-content">
-        <div
-          className={`top-element ${showEditWarning ? " opacity" : ""} ${
-            showWarning ? " opacity" : ""
-          }`}
-        >
-          <div className="show-more-top">
-            <img
-              className="icon"
-              src={back}
-              alt="Back"
-              onClick={() => handleSelected(selected.id)}
-            />
-            <h1>{selected.name}</h1>
-            <p>.</p>
-          </div>
-
-          <div className="show-more-middle">
-            <img
-              className="main-photo"
-              src={photo}
-              alt={`${selected.name} photo`}
-            />
-            <div className="description">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur animi veritatis modi suscipit eum accusantium rem
-                aliquid sapiente, recusandae dignissimos vitae deleniti. Esse
-                deleniti cupiditate aliquid nihil incidunt veniam quidem?
-              </p>
-              <div className="user-icons">
-                <img src={telegram} alt="facebook" />
-                <img src={linkedin} alt="facebook" />
-                <img src={email} alt="facebook" />
-                <img src={instagram} alt="facebook" />
-              </div>
-            </div>
-          </div>
+    <div className="show-more-content">
+      {getAuthPage && (
+        <Authentication
+          handlegetAuthPage={handlegetAuthPage}
+          handleDelete={handleDelete}
+          selected={selected}
+        />
+      )}
+      <div
+        className={`top-element ${showEditWarning ? " opacity" : ""} ${
+          showWarning ? " opacity" : ""
+        }`}
+      >
+        <div className="show-more-top">
+          <img
+            className="icon"
+            src={back}
+            alt="Back"
+            onClick={() => handleSelected(selected.id)}
+          />
+          <h1>{selected.name}</h1>
+          <p>.</p>
         </div>
 
-        <div className="show-more-actions">
-          {showEditWarning && (
-            <div
-              className={`yes-no-box-edit ${
-                showEditWarning ? "show-edit-warning" : ""
-              }`}
-            >
-              <h4>Only the one who added this can edit this testimonial.</h4>
-              <h4>Are you the one, and are you sure?</h4>
-
-              <div className="yes-no">
-                <button onClick={() => handlegetAuthPage()}>Yes</button>
-                <button onClick={handleEditClick}>No</button>
-              </div>
-            </div>
-          )}
+        <div className="show-more-middle">
           <img
-            className="icon"
-            src={edit}
-            alt="Edit"
-            onClick={handleEditClick}
+            className="main-photo"
+            src={photo}
+            alt={`${selected.name} photo`}
           />
-
-          {showWarning && (
-            <div className={`yes-no-box ${showWarning ? "show-warning" : ""}`}>
-              <h4>Only the one who added this can delete this testimonial.</h4>
-              <h4>Are you the one, and are you sure?</h4>
-
-              <div className="yes-no">
-                <button onClick={() => handlegetAuthPage()}>Yes</button>
-                <button onClick={handleDeleteClick}>No</button>
-              </div>
+          <div className="description">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consectetur animi veritatis modi suscipit eum accusantium rem
+              aliquid sapiente, recusandae dignissimos vitae deleniti. Esse
+              deleniti cupiditate aliquid nihil incidunt veniam quidem?
+            </p>
+            <div className="user-icons">
+              <img src={telegram} alt="facebook" />
+              <img src={linkedin} alt="facebook" />
+              <img src={email} alt="facebook" />
+              <img src={instagram} alt="facebook" />
             </div>
-          )}
-          <img
-            className="icon"
-            src={remove}
-            alt="Delete"
-            onClick={handleDeleteClick}
-          />
+          </div>
         </div>
       </div>
-      {getAuthPage && <Authentication handlegetAuthPage= {handlegetAuthPage} />}
+
+      <div className="show-more-actions">
+        {showEditWarning && (
+          <div
+            className={`yes-no-box-edit ${
+              showEditWarning ? "show-edit-warning" : ""
+            }`}
+          >
+            <h4>Only the person who added this can edit the testimonial.</h4>
+            <h4>Are you that person, and are you sure?</h4>
+
+            <div className="yes-no">
+              <button onClick={() => handlegetAuthPage()}>Yes</button>
+              <button onClick={handleEditClick}>No</button>
+            </div>
+          </div>
+        )}
+        <img className="icon" src={edit} alt="Edit" onClick={handleEditClick} />
+
+        {showWarning && (
+          <div className={`yes-no-box ${showWarning ? "show-warning" : ""}`}>
+            <h4>Only the one who added this can delete this testimonial.</h4>
+            <h4>Are you the one, and are you sure?</h4>
+
+            <div className="yes-no">
+              <button onClick={() => handlegetAuthPage()}>Yes</button>
+              <button onClick={handleDeleteClick}>No</button>
+            </div>
+          </div>
+        )}
+        <img
+          className="icon"
+          src={remove}
+          alt="Delete"
+          onClick={handleDeleteClick}
+        />
+      </div>
     </div>
-  ); 
+  );
 };
 
 export default ShowMore;

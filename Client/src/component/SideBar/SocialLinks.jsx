@@ -4,6 +4,10 @@ import "./SocialLinks.css";
 const SocialLinks = () => {
   return (
     <div className="social-links">
+      <div className="open-close">
+        <img src={icons.leftArrow} alt="expand -->"/>
+        <img src={icons.rightArrow} alt="collapse <--"/>
+      </div>
       <h2>HB</h2>
       <div className="social-links-content">
         <a target="_blank" href="https://t.me/Hayle_HB">

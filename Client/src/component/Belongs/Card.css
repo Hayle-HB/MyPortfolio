@@ -1,0 +1,44 @@
+.card-item {
+  border-bottom: 1px solid red;
+  border-top:1px solid aqua;
+  border-radius: 30px;
+  padding: 13px 40px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: 0.2s ease-in-out;
+}
+
+/* .card-item p {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  margin-left: 50px;
+  border-radius: 50%;
+} */
+.card-item.one {
+  color: aqua;
+  filter: grayscale(0%);
+}
+.card-item h2 {
+  color: aqua;
+}
+
+.card-item:hover {
+  filter: grayscale(0%);
+  scale: 1.1;
+}
+
+.card-item h2 {
+  text-align: center;
+  text-shadow: 2px 1px 1px red;
+}
+.card-item p {
+  color: rgb(255, 0, 255);
+  padding-left: -0px;
+  text-align: end;
+  font-style: oblique;
+  padding-top: 5px;
+  margin-right: -9px;
+}

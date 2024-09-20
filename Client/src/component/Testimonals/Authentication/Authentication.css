@@ -1,16 +1,20 @@
 /* General Styles */
 .authentication-container {
-  font-family: "Arial", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -150px;
-  margin-top: -50px;
-  width: 100px;
-  margin: 0 auto;
-  z-index: 1000;
-  border-radius: 30px;
+  position: absolute;
+  background-color: blue;
+  border-radius: 10px;
+  margin-left: 10vw;
+  margin-top: 100px;
+  z-index: 999;
 }
+
+@media (max-width: 450px) {
+  .authentication-container {
+    margin-left: -10px;
+  }
+}
+
+
 
 /* Container */
 .authentication {
@@ -19,6 +23,8 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
+
+
 
 .authentication .header {
   display: flex;
@@ -33,8 +39,6 @@
   transition: transform 0.15s ease-in-out;
 }
 
-
-
 .authentication .header img:hover {
   transform: scale(1.2);
 }
@@ -45,15 +49,13 @@
   justify-content: center;
   margin-top: 10px;
   color: rgb(255, 0, 0);
-  opacity: .7;
+  opacity: 0.7;
   background-color: white;
 }
-
 
 .error-message-box h4 {
   font-family: initial;
 }
-
 
 /* Form */
 .authentication form {
@@ -90,27 +92,22 @@
 }
 
 /* Submit Button */
-.authentication input[type="submit"] {
+.authentication button {
   padding: 15px;
   background-color: #28a745;
   color: white;
   font-size: 18px;
   border: none;
   border-radius: 5px;
+  margin-left: 0px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.authentication input[type="submit"]:hover {
+.authentication button:hover {
   background-color: #218838;
 }
 
-/* Responsive Design */
-@media (max-width: 500px) {
-  .authentication {
-    padding: 30px 20px;
-  }
-}
 
 @media (max-width: 600px) {
   .authentication h1 {
@@ -132,5 +129,13 @@
     color: #333;
     background-color: #f9f9f9;
     transition: all 0.3s ease;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .authentication {
+    padding: 30px 20px;
   }
 }

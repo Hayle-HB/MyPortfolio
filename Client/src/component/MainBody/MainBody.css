@@ -12,10 +12,7 @@
   align-items: center;
   justify-content: space-between;
   width: 80%;
-  font-family: "Edu AU VIC WA NT Hand", cursive;
-  font-optical-sizing: auto;
-  font-style: normal;
-  line-height: 30px;
+  line-height: 40px;
 }
 
 .main-text-area {
@@ -40,6 +37,11 @@
   line-height: 1.5;
   margin-bottom: 1rem;
   opacity: 0.7;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-optical-sizing: auto;
+  font-size: 1.3rem;
 }
 
 .profile-image {
@@ -169,7 +171,7 @@ button:hover {
     position: relative;
   }
   .main-body-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .main-text-area h1 {
@@ -196,31 +198,32 @@ button:hover {
     width: 20px;
   }
 
- .download-resume {
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.download-resume button {
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  font-size: .9em;
-  cursor: pointer;
-  background: linear-gradient(135deg, #7b00ff 0%, #fc25c6 100%);
-  color: rgb(212, 208, 208);
-  transition: all 0.3s ease;
-  overflow: hidden;
-  opacity: .75;
-  color: rgb(0, 0, 0);
-}
+  .download-resume {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .download-resume button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 0.9em;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7b00ff 0%, #fc25c6 100%);
+    color: rgb(212, 208, 208);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    opacity: 0.75;
+    color: rgb(0, 0, 0);
+  }
 
-.download-resume button:hover {
-  transform: scale(1.09);
-  opacity: 1;
-  color: white;
-}
-
-
+  .download-resume button:hover {
+    transform: scale(1.09);
+    opacity: 1;
+    color: white;
+  }
+  .main-text-area p {
+    font-size: 1rem;
+  }
 }

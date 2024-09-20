@@ -5,7 +5,8 @@ import twitter from "../../assets/svgs/twitter.svg";
 import tiktok from "../../assets/svgs/tiktok.svg";
 import linkedin from "../../assets/svgs/linkedin.svg";
 import github from "../../assets/svgs/github.svg";
-
+import leftArrow from '../../assets/svgs/usages/leftArrow.svg';
+import rightArrow from '../../assets/svgs/usages/RightArrow.svg'
 const Icons = {
   telegram,
   email,
@@ -14,6 +15,8 @@ const Icons = {
   tiktok,
   linkedin,
   github,
+  leftArrow,
+  rightArrow,
 };
 
 export default Icons;

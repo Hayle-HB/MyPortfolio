@@ -6,6 +6,8 @@ import Testimonials from "./component/Testimonals/Testimonials";
 import MainBody from "./component/MainBody/MainBody";
 import Skill from "./component/Skill/Skill";
 import RunningText from "./component/RunningText/RunningText";
+import Footer from "./component/Footer/Footer";
+import Belongs from "./component/Belongs/Belongs";
 const App = () => {
   return (
     <>
@@ -14,8 +16,10 @@ const App = () => {
       <MainBody />
       <RunningText text="This is a scrolling text!" />
       <Skill />
-      <div className="box"></div>
+      <Belongs/>
       <Testimonials />
+      <Footer/>
+
     </>
   );
 };

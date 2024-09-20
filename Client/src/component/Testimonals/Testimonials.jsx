@@ -60,6 +60,7 @@ const Testimonials = () => {
       image: picture,
     },
   ]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setHighlightedIndex(
@@ -81,6 +82,14 @@ const Testimonials = () => {
     }
   };
 
+  const fetchTestimonialsData = async () => {
+    try {
+      const result = await fetch("localhost")
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const handleEdit = () => {};
 
   const handleDelete = (index) => {
@@ -89,6 +98,7 @@ const Testimonials = () => {
     setSelected(null);
     setTestimonialsData(newData);
   };
+
   return (
     <div className="testimonials-container">
       <div>
