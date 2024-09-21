@@ -62,7 +62,7 @@ const Skill = () => {
           ))}
         </Slider>
       </div>
-      <Blongs/>
+      {/* <Blongs/> */}
     </div>
   );
 };

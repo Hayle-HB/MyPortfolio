@@ -1,0 +1,159 @@
+.tempo-container {
+  width: fit-content;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-left: 100px;
+  box-sizing: border-box;
+}
+
+.tempo-container .tempo-content .header-top {
+  display: flex;
+  align-items: top;
+  justify-content: start;
+  gap: 40px;
+}
+
+.tempo-container .tempo-content .header-top img {
+  margin-top: -60px;
+}
+.tempo-container .tempo-content .header-top .prog-note {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Inter, Arial, sans-serif;
+  color: rgb(210, 214, 223);
+}
+
+.tempo-container .tempo-content .header-top .prog-note h3 {
+  align-self: start;
+  margin-top: 30px;
+}
+
+.tempo-container .tempo-content .card-tempo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 60px;
+  gap: 80px;
+  padding-top: 40px;
+}
+
+.tempo-container .tempo-content .card-tempo .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  width: 100%;
+  border: 1px solid rgb(123, 123, 123);
+  border-radius: 10px;
+}
+
+.tempo-container .tempo-content .card-tempo .last {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 190px;
+  width: 100%;
+  gap: 14px;
+  border-left: 1px solid rgb(123, 123, 123);
+  padding-left: 40px;
+
+  h4 {
+    color: rgb(98, 189, 255);
+    margin-left: 0px;
+  }
+
+  h4:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.tempo-container .tempo-content .card-tempo .item h3 {
+  font-size: 12px;
+  color: rgb(98, 189, 255);
+  transition: 0.5s;
+}
+
+.tempo-container .tempo-content .card-tempo .item:hover {
+  border: 2px solid rgb(98, 189, 255);
+  background-color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 1250px) {
+  .tempo-container .tempo-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .tempo-container .tempo-content {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .tempo-container .tempo-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .tempo-container {
+    padding-left: 10px;
+  }
+  .tempo-container .tempo-content {
+    gap: 30px;
+  }
+
+  .tempo-container .tempo-content .header-top {
+    width: 330px;
+    gap: 20px;
+  }
+
+  .tempo-container .tempo-content .header-top .prog-note h1 {
+    font-size: 23px;
+    color: var(--primary-green-color);
+  }
+
+   .tempo-container .tempo-content .header-top .prog-note h3 {
+    color: aqua;
+   }
+
+  .tempo-container .tempo-content .card-tempo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 200px;
+    gap: 25px;
+    padding: 10px;
+    padding-left: 15px;
+  }
+
+  .tempo-container .tempo-content .header-top img {
+    margin-top: -140px;
+  }
+
+  .tempo-container .tempo-content .card-tempo .last {
+    height: 190px;
+    width: 100%;
+    gap: 14px;
+    border-left: 1px solid rgb(123, 123, 123);
+    padding-left: 20px;
+   h3 {
+    font-size: 13px;
+   }
+    h4 {
+      color: rgb(98, 189, 255);
+      font-size: 13px;
+      margin-left: 0px;
+    }
+
+    h4:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

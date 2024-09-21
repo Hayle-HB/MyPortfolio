@@ -12,7 +12,7 @@ app.use("/api", router);
 // mongobd connection
 
 const url =
-  "mongodb+srv://hayle_hb:<password>@nodejs.b3kc1wk.mongodb.net/MyPortfolio?retryWrites=true&w=majority&appName=NodeJS";
+  "mongodb+srv://hayle_hb:HHBW1234@nodejs.b3kc1wk.mongodb.net/MyPortfolio?retryWrites=true&w=majority&appName=NodeJS";
 
 
 mongoose

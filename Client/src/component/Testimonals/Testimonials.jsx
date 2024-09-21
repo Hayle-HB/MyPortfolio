@@ -3,6 +3,13 @@ import Card from "./Card/Card";
 import "./Testimonials.css";
 import picture from "../../assets/Img/main-one.jpg";
 import ShowMore from "./ShowMore/ShowMore.jsx";
+// import useFetch from "../../hooks/useFetch.jsx";
+
+// const [data, loading, error] = useFetch('localhost:3000/api/testimonials');
+
+// if(!error){
+//   console.log(data);
+// }
 
 const Testimonials = () => {
   const [highlightedIndex, setHighlightedIndex] = useState(0);
@@ -61,6 +68,28 @@ const Testimonials = () => {
     },
   ]);
 
+  // async function fetchTestimonials() {
+  //   try {
+  //     const response = await fetch("http://localhost:3000/api/testimonials", {
+  //       method: "GET",
+  //       headers: {
+  //         "Content-Type": "application/json", 
+  //       },
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error("Network response was not ok: " + response.statusText);
+  //     }
+
+  //     const testimonials = await response.json();
+  //     console.log(testimonials); // Handle the fetched testimonials
+  //   } catch (error) {
+  //     console.error("There was a problem fetching the testimonials:", error);
+  //   }
+  // }
+
+  // fetchTestimonials();
+
   useEffect(() => {
     const interval = setInterval(() => {
       setHighlightedIndex(
@@ -84,7 +113,7 @@ const Testimonials = () => {
 
   const fetchTestimonialsData = async () => {
     try {
-      const result = await fetch("localhost")
+      const result = await fetch("localhost");
     } catch (err) {
       console.log(err);
     }

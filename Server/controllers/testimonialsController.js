@@ -9,7 +9,7 @@ module.exports.handleFetchTestimonials = async (req, res) => {
     res.status(500).send("unable to fetch the data");
   }
 };
-
+ 
 module.exports.handleAddTestimonials = async (req, res) => {
   const { name, testimony, description, socialLink, image } = req.body;
 

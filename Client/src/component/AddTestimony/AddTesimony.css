@@ -1,0 +1,134 @@
+.addTestimony-container {
+  margin: 100px auto;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  border: 2px solid var(--primary-green-color);
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  max-width: 80%; /* Use 80% of the screen width */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.addTestimony-container h1 {
+  color: var(--primary-green-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-content {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-row {
+  display: flex; /* Use flexbox for the row */
+  justify-content: space-between; /* Space out the columns */
+}
+
+.form-column {
+  flex: 1; /* Allow columns to grow equally */
+  margin: 0 10px; /* Add some margin between columns */
+}
+
+label {
+  margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 3px solid ;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+  width: 80%; /* Ensure inputs are full-width within columns */
+  resize: none;
+  
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-green-color);
+  outline: none;
+}
+
+.addTestimony-container button {
+  padding: 10px;
+  background-color: var(--primary-green-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.addTestimony-container button:hover {
+  background-color: darken(var(--primary-green-color), 10%);
+  border: 1px solid var(--primary-green-color);
+}
+
+
+.drag-drop-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.drag-drop-img label {
+  color: var(--primary-green-color);
+
+}
+
+
+
+@media (max-width: 500px){
+  .addTestimony-container  {
+    max-width: 100%;
+  }
+
+  .addTestimony-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .form-row {
+  display: flex; /* Use flexbox for the row */
+  flex-direction: column;
+  justify-content: space-between; /* Space out the columns */
+}
+  
+.drag-drop-img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+  padding-left: 50px;
+}
+}

@@ -8,18 +8,22 @@ import Skill from "./component/Skill/Skill";
 import RunningText from "./component/RunningText/RunningText";
 import Footer from "./component/Footer/Footer";
 import Belongs from "./component/Belongs/Belongs";
+import AddTestimony from "./component/AddTestimony/AddTestimony";
+import Tempo from "./component/Tempo/Tempo";
 const App = () => {
   return (
-    <>
+    <> 
       <NavBar />
-      <SocialLinks />
+      <Tempo/>
+      {/* <SocialLinks /> */}
       <MainBody />
       <RunningText text="This is a scrolling text!" />
       <Skill />
-      <Belongs/>
+      {/* <Belongs /> */}
       <Testimonials />
-      <Footer/>
+      <AddTestimony />
 
+      <Footer />
     </>
   );
 };
