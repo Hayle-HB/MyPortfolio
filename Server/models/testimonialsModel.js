@@ -11,7 +11,7 @@ const testimonySchema = new mongoose.Schema({
   name: { type: String, required: true },
   testimony: { type: String, required: true },
   description: { type: String, required: true },
-  socialLink: { type: socialLinkSchema, required: true },
+  socialLinks: { type: socialLinkSchema, required: true },
   image: { type: String, required: true },
 });
 

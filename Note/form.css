@@ -1,0 +1,83 @@
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+  background-color: rgb(245, 244, 244);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+input, textarea {
+  border: 1px solid #8bc6ec;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  background: transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  resize: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #4fa4dd;
+  box-shadow: 0 0 5px rgba(79, 164, 221, 0.5);
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 0 5px;
+  font-size: 1rem;
+  color: gray;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 8px;
+  font-size: 0.85rem;
+  color: #4fa4dd;
+}
+
+button {
+  background-color: #4fa4dd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #379ec6;
+}

@@ -1,12 +1,14 @@
 const { Router } = require("express");
 const {
-  handleFetchTestimonials, handleAddTestimonials,
+  handleFetchTestimonials,
+  handleAddTestimonials,
 } = require("../controllers/testimonialsController");
 const router = Router();
 const testimonials = require("../datas/testimonials");
+const upload = require("../controllers/ImageUploader/upload");
 
-router.get("/testimonials", handleFetchTestimonials); 
+router.get("/file", handleFetchTestimonials);
 
-router.post("/testimonials", handleAddTestimonials);
+router.post("/file", upload.single('file'),  handleAddTestimonials);
 
 module.exports = router;

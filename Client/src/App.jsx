@@ -15,7 +15,7 @@ const App = () => {
     <> 
       <NavBar />
       <Tempo/>
-      {/* <SocialLinks /> */}
+      <SocialLinks />
       <MainBody />
       <RunningText text="This is a scrolling text!" />
       <Skill />

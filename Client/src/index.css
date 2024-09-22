@@ -1,5 +1,8 @@
 :root {
-  --primary-green-color: rgb(0, 237, 100);
+  --primary-green: rgb(0, 237, 100);
+  --secondary-dark-green:#17bf63;
+  --primary-aqua: aqua;
+  --secondary-dark-aqua:#40e7f1;
 }
 
 * {
@@ -9,7 +12,7 @@
 
 body {
   background-color: #0a192f;
-  /* width: 80%; */
+  width: 80%;
   margin: 0 auto;
   color: white;
   scroll-behavior: smooth;
